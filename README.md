@@ -14,7 +14,8 @@ In order to get Pattern Lab up and running in your local environment.
 
 ## Exporting to the Style Guide
 
-Pattern Lab serves as the [workshop](http://bradfrost.com/blog/post/the-workshop-and-the-storefront/) where the design system design and development is done. The style guide (which can be [found at this repository](https://github.com/bradfrost/ah-style-guide)) serves as the storefront where the patterns and documentation are presented. Here's how to export patterns and other assets from Pattern Lab into the style guide:
+Pattern Lab serves as the [workshop](http://bradfrost.com/blog/post/the-workshop-and-the-storefront/) where the design system design and development is done. The style guide serves as the storefront where the patterns and documentation are presented. Here's how to export patterns and other assets from Pattern Lab into the style guide:
+
 
 1. Make sure the Pattern Lab and style guide repositories are sitting adjacent to each other, like so:
 
