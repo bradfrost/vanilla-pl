@@ -63,7 +63,7 @@ gulp.task("scsstojson", function (done) {
       dest: "./source/_patterns/00-atoms/01-global/00-brand-colors.json",
       lineStartsWith: "$color-brand-",
       allowVarValues: false
-  },
+    },
     {
       src: "./source/css/scss/abstracts/_variables.scss",
       dest:
@@ -77,6 +77,18 @@ gulp.task("scsstojson", function (done) {
         "./source/_patterns/00-atoms/01-global/00-utility-colors.json",
       lineStartsWith: "$color-utility-",
       allowVarValues: false
+    },
+    {
+      src: "./source/css/scss/abstracts/_variables.scss",
+      dest: "./source/_patterns/00-atoms/01-global/02-font-families.json",
+      lineStartsWith: "$font-family-",
+      allowVarValues: false
+    },
+    {
+    src: "./source/css/scss/abstracts/_variables.scss",
+    dest: "./source/_patterns/00-atoms/01-global/02-font-sizes.json",
+    lineStartsWith: "$font-size-",
+    allowVarValues: false
     }
   ];
 

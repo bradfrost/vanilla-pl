@@ -83,8 +83,8 @@ $color-utility-warning-light: #fffecf;
 /**
  * Font Family
  */
-$font-primary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-secondary: serif;
+$font-family-primary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-family-secondary: serif;
 
 
 /**
@@ -101,11 +101,6 @@ $font-size-xl: 3rem;
  * Line Height
  */
 $line-height: 1.5;
-
-$font-size-h1: 48px !default;
-$font-size-h2: 36px !default;
-$font-size-h3: 27px !default;
-$font-size-h4: 19px !default;
 
 
 
