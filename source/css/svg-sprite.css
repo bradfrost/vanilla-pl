@@ -2,6 +2,11 @@
     #SVG SPRITE OVERRIDES
 \*------------------------------------*/
 
+section {
+    border-top: none !important;
+    padding: 0 !important;
+}
+
 .icon-boxes {
     display: flex !important;
     flex-wrap: wrap !important;
