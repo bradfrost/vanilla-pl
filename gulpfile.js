@@ -182,6 +182,15 @@ gulp.task('pl-copy:font', function () {
     .pipe(gulp.dest(normalizePath(paths().public.fonts)));
 });
 
+// Pattern scaffolding copy
+gulp.task("pl-copy:pattern-scaffolding", function () {
+  return gulp
+    .src("pattern-scaffolding.css", {
+      cwd: normalizePath(paths().source.css)
+    })
+    .pipe(gulp.dest(normalizePath(paths().public.css)));
+});
+
 // Styleguide Copy everything but css
 gulp.task('pl-copy:styleguide', function () {
   return gulp.src(normalizePath(paths().source.styleguide) + '/**/!(*.css)')
@@ -354,10 +363,16 @@ function watch() {
       tasks: gulp.series('pl-sass',  reloadCSS)
     },
     {
+      name: 'SVG Sprite CSS',
+      paths: [normalizePath(paths().source.css, 'svg-sprite.css')],
+      config: { awaitWriteFinish: true },
+      tasks: gulp.series('pl-copy:svg-css', reloadCSS)
+    },
+    {
       name: 'Pattern Scaffolding CSS',
       paths: [normalizePath(paths().source.css, 'pattern-scaffolding.css')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series(reloadCSS)
+      tasks: gulp.series("pl-copy:pattern-scaffolding", reloadCSS)
     },
     {
       name: 'Images',
