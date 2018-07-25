@@ -102,15 +102,18 @@ gulp.src('./public/css/style.css')
  * SVG SPRITE
 ******************************************************/
 gulp.task('svg-sprite', function () {
-    return gulp.src('source/icons/*.svg')
-      .pipe(svgSprite({
-        mode: 'defs',
-        preview: false,
-        svg: {
-          defs: 'icons.svg'
-        }
-      }))
-      .pipe(gulp.dest('public'));
+  return gulp.src('source/icons/*.svg')
+    .pipe(svgSprite({
+      mode: 'symbols',
+      cssFile: "../../css/svg-sprite.css",
+      preview: {
+          symbols: '../source/_patterns/00-atoms/images/icons.mustache'
+      },
+      svg: {
+        symbols: 'icons.svg'
+      }
+    }))
+    .pipe(gulp.dest('public'));
 });
 
 /******************************************************
@@ -156,6 +159,15 @@ gulp.task('pl-copy:js', function () {
 gulp.task('pl-copy:img', function () {
   return gulp.src('**/*.*',{cwd: normalizePath(paths().source.images)} )
     .pipe(gulp.dest(normalizePath(paths().public.images)));
+});
+
+// SVG CSS copy
+gulp.task("pl-copy:svg-css", function () {
+  return gulp
+    .src("svg-sprite.css", {
+      cwd: normalizePath(paths().source.css)
+    })
+    .pipe(gulp.dest(normalizePath(paths().public.css)));
 });
 
 // Favicon copy
@@ -266,6 +278,7 @@ gulp.task('pl-assets', gulp.series(
   gulp.series('pl-sass', 'prefix', "scsstojson", function(done){done();}), //CSS tasks
   'pl-copy:styleguide',
   'pl-copy:styleguide-css',
+  'pl-copy:svg-css',
   'concat-and-minify'
 ));
 
