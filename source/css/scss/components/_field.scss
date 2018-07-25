@@ -6,7 +6,7 @@
  * 1) Consists of a label, form control, and an optional note about the field.
  */
  .c-field {
-	margin-bottom: $spacing-large;	
+	margin-bottom: $spacing-large;
 }
 
 /**
@@ -31,5 +31,5 @@
 .c-field__note {
     display: inline-block;
     font-size: $font-size-sm;
-    color: $color-gray-50;
+    color: $color-neutral-gray-50;
 }

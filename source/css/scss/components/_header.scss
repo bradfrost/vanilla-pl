@@ -7,7 +7,7 @@
  */
 .c-header {
 	position: relative;
-	background: $color-gray-07;
+	background: $color-neutral-gray-07;
 }
 
 /**
@@ -68,7 +68,7 @@
 .c-header__nav-container.is-active {
 	display: block;
 	position: absolute;
-	background: $color-gray-07;
+	background: $color-neutral-gray-07;
 	top: 100%;
 	left: 0;
 	width: 100%;

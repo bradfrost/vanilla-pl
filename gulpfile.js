@@ -10,6 +10,7 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   svgSprite = require('gulp-svg-sprites'),
+  scssToJson = require("scsstojson"),
   argv = require('minimist')(process.argv.slice(2)),
   chalk = require('chalk'),
   copy = require('gulp-copy'),
@@ -50,6 +51,38 @@ gulp.task('pl-sass', function(){
   return gulp.src(path.resolve(paths().source.css, '**/*.scss'))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(path.resolve(paths().public.css)));
+});
+
+/******************************************************
+ * SCSS TO JSON
+ ******************************************************/
+gulp.task("scsstojson", function (done) {
+  var items = [
+    {
+      src: "./source/css/scss/abstracts/_variables.scss",
+      dest: "./source/_patterns/00-atoms/01-global/00-brand-colors.json",
+      lineStartsWith: "$color-brand-",
+      allowVarValues: false
+  },
+    {
+      src: "./source/css/scss/abstracts/_variables.scss",
+      dest:
+        "./source/_patterns/00-atoms/01-global/00-neutral-colors.json",
+      lineStartsWith: "$color-neutral-",
+      allowVarValues: false
+    },
+    {
+      src: "./source/css/scss/abstracts/_variables.scss",
+      dest:
+        "./source/_patterns/00-atoms/01-global/00-utility-colors.json",
+      lineStartsWith: "$color-utility-",
+      allowVarValues: false
+    }
+  ];
+
+  scssToJson(items, {}, function () {
+    done();
+  });
 });
 
 /******************************************************
@@ -230,7 +263,7 @@ gulp.task('pl-assets', gulp.series(
   'pl-copy:favicon',
   'svg-sprite',
   'pl-copy:font',
-  gulp.series('pl-sass', 'prefix', function(done){done();}), //CSS tasks
+  gulp.series('pl-sass', 'prefix', "scsstojson", function(done){done();}), //CSS tasks
   'pl-copy:styleguide',
   'pl-copy:styleguide-css',
   'concat-and-minify'

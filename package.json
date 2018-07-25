@@ -9,6 +9,7 @@
     "gulp-copy": "1.0.0",
     "minimist": "^1.2.0",
     "patternlab-node": "^2.0.0",
+    "scsstojson": "^1.0.2",
     "styleguidekit-assets-default": "^3.0.0",
     "styleguidekit-mustache-default": "^3.0.0"
   },
