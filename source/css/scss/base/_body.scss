@@ -21,7 +21,7 @@ body {
 	display: flex; /* 1 */
 	flex-direction: column; /* 1 */
 	min-height: 100vh; /* 1 */
-	font-family: $font-primary;
+	font-family: $font-family-primary;
 	font-size:  $body-font-size;
 	line-height: $line-height;
 	-webkit-text-size-adjust: 100%; /* 2 */

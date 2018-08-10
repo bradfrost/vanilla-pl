@@ -36,7 +36,7 @@
  /*------------------------------------*\
      #COLORS
  \*------------------------------------*/
- 
+
 /**
  * Brand Colors
  * 1) Brand=specific colors
@@ -47,16 +47,16 @@ $color-brand-blue: #0000ff;
  * Neutral Colors
  * 1) Neutral colors are grayscale values used throughout the UI
  */
-$color-white: #fff;
-$color-gray-02: #f9f9f9;
-$color-gray-07: #eee;
-$color-gray-13: #ddd;
-$color-gray-27: #bbb;
-$color-gray-50: #808080;
-$color-gray-60: #666;
-$color-gray-73: #444;
-$color-gray-93: #131313;
-$color-black: #000;
+$color-neutral-white: #fff;
+$color-neutral-gray-02: #f9f9f9;
+$color-neutral-gray-07: #eee;
+$color-neutral-gray-13: #ddd;
+$color-neutral-gray-27: #bbb;
+$color-neutral-gray-50: #808080;
+$color-neutral-gray-60: #666;
+$color-neutral-gray-73: #444;
+$color-neutral-gray-93: #131313;
+$color-neutral-black: #000;
 
 /**
  * Utility Colors
@@ -83,8 +83,8 @@ $color-utility-warning-light: #fffecf;
 /**
  * Font Family
  */
-$font-primary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-secondary: serif;
+$font-family-primary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-family-secondary: serif;
 
 
 /**
@@ -101,11 +101,6 @@ $font-size-xl: 3rem;
  * Line Height
  */
 $line-height: 1.5;
-
-$font-size-h1: 48px !default;
-$font-size-h2: 36px !default;
-$font-size-h3: 27px !default;
-$font-size-h4: 19px !default;
 
 
 

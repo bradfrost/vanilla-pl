@@ -8,7 +8,8 @@
     "gulp": "gulpjs/gulp#4.0",
     "gulp-copy": "1.0.0",
     "minimist": "^1.2.0",
-    "patternlab-node": "^2.12.0",
+    "patternlab-node": "^2.0.0",
+    "scsstojson": "^1.0.2",
     "styleguidekit-assets-default": "^3.0.0",
     "styleguidekit-mustache-default": "^3.0.0"
   },
