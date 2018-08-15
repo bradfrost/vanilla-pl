@@ -296,7 +296,7 @@ gulp.task('pl-assets', gulp.series(
   'pl-copy:favicon',
   'svg-sprite',
   'pl-copy:font',
-  gulp.series('pl-sass', 'prefix', "scsstojson", function(done){done();}), //CSS tasks
+  gulp.series('pl-sass', 'prefix', 'scsstojson', function(done){done();}), //CSS tasks
   'pl-copy:styleguide',
   'pl-copy:styleguide-css',
   'pl-copy:svg-css',
@@ -372,7 +372,7 @@ function watch() {
       name: 'CSS',
       paths: [normalizePath(paths().source.css, '**', '*.scss')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series('pl-sass',  reloadCSS)
+      tasks: gulp.series('pl-sass', 'prefix', reloadCSS)
     },
     {
       name: 'SVG Sprite CSS',
@@ -416,7 +416,6 @@ function watch() {
         normalizePath(paths().source.patterns, '**', '*.json'),
         normalizePath(paths().source.patterns, '**', '*.md'),
         normalizePath(paths().source.data, '**', '*.json'),
-        normalizePath(paths().source.css, '**/*.scss'),
         normalizePath(paths().source.fonts, '**', '*'),
         normalizePath(paths().source.images, '**', '*'),
         normalizePath(paths().source.icons, '**', '*'),
