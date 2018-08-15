@@ -14,9 +14,8 @@
 
 /**
  *
- * 1) This narrow layout container is for lists, forms,
- *    and other singular objects that aren't dashboard-y
- *    kinds of displays
+ * 1) This caps the width of text passages
+ *    to achieve a comfortable line length
  */
 .l-linelength-container {
     max-width: $l-linelength-width;
