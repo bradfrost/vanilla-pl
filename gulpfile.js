@@ -366,6 +366,15 @@ function reloadCSS(done) {
   done();
 }
 
+/**
+ * Reloads BrowserSync, with JS injection.
+ * Note: Exits more reliably when used with a done callback.
+ */
+function reloadJS(done) {
+  browserSync.reload('*.js');
+  done();
+}
+
 function watch() {
   const watchers = [
     {
@@ -402,7 +411,7 @@ function watch() {
       name: 'JavaScript',
       paths: [normalizePath(paths().source.js, '**', '*.js')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series('concat-and-minify')
+      tasks: gulp.series('concat-and-minify', reloadJS)
     },
     {
       name: 'Styleguide Files',
@@ -419,7 +428,6 @@ function watch() {
         normalizePath(paths().source.fonts, '**', '*'),
         normalizePath(paths().source.images, '**', '*'),
         normalizePath(paths().source.icons, '**', '*'),
-        normalizePath(paths().source.js, '**', '*'),
         normalizePath(paths().source.meta, '**', '*'),
         normalizePath(paths().source.annotations, '**', '*')
       ].concat(getTemplateWatches()),
