@@ -15,34 +15,42 @@
 /**
  * XL Type Styles
  */
-@mixin typographyXl() {
+ @mixin typographyBodyLarge() {
+    font-size: $font-size-med-2;
+	line-height: $line-height-large;
+}
+
+/**
+ * XL Heading Styles
+ */
+@mixin typographyHeadingXl() {
     font-size: $font-size-xl;
     font-weight: normal;
 	line-height: 1.6;
 }
 
 /**
- * Large Type Styles
+ * Large Heading Styles
  */
- @mixin typographyLarge() {
+ @mixin typographyHeadingLarge() {
     font-size: $font-size-large;
     font-weight: normal;
 	line-height: 1.6;
 }
 
 /**
- * Medium 2 Type Styles
+ * Medium 2 Heading Styles
  */
- @mixin typographyMed2() {
+ @mixin typographyHeadingMed2() {
     font-size: $font-size-med-2;
     font-weight: normal;
 	line-height: 1.2;
 }
 
 /**
- * Medium Type Styles
+ * Medium Heading Styles
  */
- @mixin typographyMed() {
+ @mixin typographyHeadingMed() {
     font-size: $font-size-med;
     font-weight: normal;
 	line-height: 1.2;
