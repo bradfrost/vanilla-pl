@@ -106,11 +106,12 @@
 * For placeholder only block
 * 1) Used for placeholder blocks for layouts
 */
-.fpo-block {
+.fpo {
     padding: 1rem;
     background: #f5f5f5;
     text-align: center;
     font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 /**
