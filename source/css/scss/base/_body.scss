@@ -20,7 +20,6 @@ body {
 	display: flex; /* 1 */
 	flex-direction: column; /* 1 */
 	min-height: 100vh; /* 1 */
-	font-family: $font-family-primary;
 	@include typographyBody();
 	background-color: $color-body-bg;
 	color: $color-body-text;
