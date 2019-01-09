@@ -1,13 +1,13 @@
-# Pattern Lab Node
+# Vanilla Pattern Lab
 
-This project is built with [Pattern Lab Node](https://github.com/pattern-lab/edition-node-gulp).
+Vanilla Pattern Lab is a barebones UI starter kit that uses [Pattern Lab Node](https://github.com/pattern-lab/edition-node-gulp).
 
 ## Installing
 
-In order to get Pattern Lab up and running in your local environment.
+In order to get Pattern Lab up and running in your local environment, run the following commands in your terminal:
 
-1. Download or clone this repository to your local machine.
-2. If gulp is not installed on your computer, install it using `npm install gulp-cli -g` in the command line. If that doesn't work, try the `sudo npm install gulp-cli -g` command.
+1. `git clone https://github.com/bradfrost/vanilla-pl.git && cd vanilla-pl`
+2. If gulp is not installed on your computer, install it using `npm install gulp-cli -g` in the command line.
 3. In the command line, navigate to the root of the project, then run `npm install` to download the project's dependencies.
 4. Run `gulp patternlab:serve` to build Pattern Lab and watch for changes.
 5. Visit `http://localhost:3000/` in your browser to view Pattern Lab.
